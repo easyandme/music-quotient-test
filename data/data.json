@@ -2,51 +2,56 @@
   {
     "describe": "<b>这段音乐的节奏变化是？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/a.mp3'></audio>",
+    "genre": "rhythm",
     "A": { 
-      "describe": "越来越快",
-      "bonus": 10
+      "describe": "越来越快"
     },
     "B": {
-      "describe": "没有变化"
+      "describe": "没有变化",
+      "bonus": 10,
+      "r_score": 1
     } 
   },
   {
     "describe": "<b>这段音乐的节奏变化是？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/b.mp3'></audio>",
+    "genre": "rhythm",
     "A": {
       "describe": "越来越快"
     },
-    "B": {
-      "score": "Math.floor(Math.random()*(40-30+1))+33",
+    "B": {  
       "describe": "没有变化",
-      "bonus": 10
+      "bonus": 10,
+      "r_score": 1
     } 
   },
   {
     "describe": "<b>选出下面最能达标这个音乐片段的图形</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/c.mp3'></audio>",
+    "genre": "sense",
     "A": {
-      "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;&#9632;</span>"
+      "describe": "<span style='font-size:3em;line-height:20px;margin-left:30px;'>&#9632;&#9632;&#9632;</span>"
     },
     "B": {
-      "describe": "<span style='font-size:3em;line-height:20px;'><span style='position:absolute;top:0'>&#9632;</span><span style='position:absolute;left:52px;top:10px'>&#9632;</span><span style='position:absolute;left:79px;top:20px;'>&#9632;</span></span>"
+      "describe": "<span style='font-size:3em;line-height:20px;margin-left:30px;'><span style='position:absolute;top:0'>&#9632;</span><span style='position:absolute;left:82px;top:10px'>&#9632;</span><span style='position:absolute;left:109px;top:20px;'>&#9632;</span></span>",
+      "bonus": 10,
+      "sense_score": 1
     },
-    "C": {
-      "score": "Math.floor(Math.random()*(35-25+1))+25",
-      "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;<span style='position:absolute;top:0'>&#9632;</span></span>",
-      "bonus": 10
+    "C": { 
+      "describe": "<span style='font-size:3em;line-height:20px;margin-left:30px;'>&#9632;&#9632;<span style='position:absolute;top:0'>&#9632;</span></span>"
     }
   },
   {
     "describe": "<b>选出下面最能达标这个音乐片段的图形</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/d.mp3'></audio>",
+    "genre": "sense",
     "A": {
-      "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;&#9632;&#9632;<span style='position:absolute;top:0'>&#8211;</span><span style='position:absolute;left:160px'>&#9632;</span></span>"
+      "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;&#9632;&#9632;<span style='position:absolute;top:0'>&#8211;</span><span style='position:absolute;left:160px'>&#9632;</span></span>",
+      "bonus": 10,
+      "sense_score": 1
     },
-    "B": {
-      "straw": "Math.floor(Math.random()*(29-21+1))+21",
-      "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;&#9632;&#9632;<span style='position:absolute;top:10px'>&#8211;</span><span style='position:absolute;left:160px'>&#9632;</span></span>",
-      "bonus": 10
+    "B": { 
+      "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;&#9632;&#9632;<span style='position:absolute;top:10px'>&#8211;</span><span style='position:absolute;left:160px'>&#9632;</span></span>"
     },
     "C": {
       "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;&#9632;&#9632;<span style='position:absolute;top:20px'>&#8211;</span><span style='position:absolute;left:160px'>&#9632;</span></span>"
@@ -55,13 +60,14 @@
   {
     "describe": "<b>这个用军鼓演奏的片段中，军鼓总共敲击了几下？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/e.mp3'></audio>",
+    "genre": "memo",
     "A": {
       "describe": "10下"
     },
-    "B": {
-      "score": "Math.floor(Math.random()*(34-24+1))+24",
+    "B": { 
       "describe": "11下",
-      "bonus": 10
+      "bonus": 10,
+      "memo_score": 1
     },
     "C": {
       "describe": "12下"
@@ -70,46 +76,49 @@
   {
     "describe": "<b>音频中的两个音乐片段是否完全相同？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/f.mp3'></audio>",
+    "genre": "memo",
     "A": {
       "describe": "完全相同"
     },
     "B": {
       "describe": "不同，节奏不一致"
     },
-    "C": {
-      "score": "Math.floor(Math.random()*(45-40+1))+35",
+    "C": { 
       "describe": "不同，音高不一致",
-      "bonus": 10
+      "bonus": 10,
+      "memo_score": 1
     }
   },
   {
     "describe": "<b>音频中的两个音乐片段是否完全相同？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/g.mp3'></audio>",
-    "A": {
-      "score": "Math.floor(Math.random()*(22-15+1))+15",
-      "describe": "完全相同",
-      "bonus": 10
+    "genre": "memo",
+    "A": { 
+      "describe": "完全相同"
     },
     "B": {
       "describe": "不同，节奏不一致"
     },
     "C": {
-      "describe": "不同，音高不一致"
+      "describe": "不同，音高不一致",
+      "bonus": 10,
+      "memo_score": 1
     }
   },
   {
     "describe": "<b>音频中的两个音乐片段是否完全相同？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/h.mp3'></audio>",
-    "A": {
-      "score": "Math.floor(Math.random()*(22-15+1))+15",
-      "describe": "完全相同",
-      "bonus": 10
+    "genre": "memo",
+    "A": { 
+      "describe": "完全相同"
     },
     "B": {
       "describe": "不同，节奏不一致"
     },
     "C": {
-      "describe": "不同，音高不一致"
+      "describe": "不同，音高不一致",
+      "bonus": 10,
+      "memo_score": 1
     },
     "D": {
       "describe": "节奏和音高都不同"
@@ -118,8 +127,11 @@
   {
     "describe": "<b>这段音乐表达的情绪是？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/i.mp3'></audio>",
+    "genre": "decision",
     "A": {
-      "describe": "紧张的"
+      "describe": "紧张的",
+      "bonus": 10,
+      "decision_score": 1
     },
     "B": {
       "describe": "轻松的"
@@ -128,8 +140,11 @@
   {
     "describe": "<b>这段音乐的感觉更偏向于？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/j.mp3'></audio>",
+    "genre": "decision",
     "A": {
-      "describe": "阳光沙滩"
+      "describe": "阳光沙滩",
+      "bonus": 10,
+      "decision_score": 1
     },
     "B": {
       "describe": "冰天雪地"
@@ -138,23 +153,27 @@
   {
     "describe": "<b>这段乐曲是由吉他、架子鼓和什么乐器共同完成的？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/k.mp3'></audio>",
+    "genre": "knowledge",
     "A": {
       "describe": "合成器"
     },
     "B": {
-      "describe": "贝司"
+      "describe": "贝司",
+      "bonus": 10,
+      "knowledge_score": 1
     }
   },
   {
     "describe": "<b>这段乐曲的主旋律是由什么乐器完成的？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/l.mp3'></audio>",
+    "genre": "knowledge",
     "A": {
-      "describe": "吉他"
+      "describe": "吉他",
+      "bonus": 10,
+      "knowledge_score": 1
     },
-    "B": {
-      "score": "Math.floor(Math.random()*(40-35+1))+37",
-      "describe": "贝司",
-      "bonus": 10
+    "B": { 
+      "describe": "贝司"
     },
     "C": {
       "describe": "合成器"
@@ -163,20 +182,24 @@
   {
     "describe": "<b>这段音乐的风格是？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/m.mp3'></audio>",
-    "A": {
-      "score": "Math.floor(Math.random()*(30-25+1))+23",
-      "describe": "乡村音乐",
-      "bonus": 10
+    "genre": "knowledge",
+    "A": { 
+      "describe": "乡村音乐"
     },
     "B": {
-      "describe": "布鲁斯摇滚"
+      "describe": "布鲁斯摇滚",
+      "bonus": 10,
+      "knowledge_score": 1
     } 
   },
   {
     "describe": "<b>这段音乐的风格是？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/n.mp3'></audio>",
+    "genre": "knowledge",
     "A": {
-      "describe": "爵士乐"
+      "describe": "爵士乐",
+      "bonus": 10,
+      "knowledge_score": 1
     },
     "B": {
       "describe": "古典音乐"

@@ -5,11 +5,16 @@ $(function() {
 $('body').bind('touchstart', function() {});
   FastClick.attach(document.body);
 
-var q, k;
+var q, k, m;
 var l = 0;
+var s = 0;
 var n = 1;
 var qar = [];
 var playN = 0;
+var rhythm = 0, sense = 0, memo = 0, deci = 0, know = 0;
+var r, w, x, y, z, o; 
+
+
 
 function first() {
     q = qar; 
@@ -40,19 +45,37 @@ $('#start_btn').click(function() {
       $('.quiz').fadeIn(500);
       }, 1000)
       first();
+      $('#start_audio').remove();
 })
 
 $('.choice').click(function() {
-      k += 1;
       n += 1;
       l += 50/7; 
       $("#progressbar>div").css("width", l + "%");
-      $("#pg").text(k + "/14");
+      var u = $(this).attr("data-choice");
+      o = q[k];
+      console.log(o[u]);
+      if (k < 14) {
+      m = o[u].bonus || 0;
+      s += m; 
+      r = o[u].r_score || 0;
+      rhythm += r;
+      w = o[u].sense_score || 0;
+      sense += w;
+      x = o[u].memo_score || 0;
+      memo += x;
+      y = o[u].decision_score || 0;
+      deci += y;
+      z = o[u].knowledge_score || 0;
+      know += z; 
+      console.log(deci);
+      $("#pg").text(k + 1 + "/14");
       if ($('.quiz').hasClass('fadeInRight animated')) {$('.quiz').removeClass('fadeInRight animated')};
       if ($('.play_btn>img').hasClass('spin begin')) {$('.play_btn>img').removeClass('spin begin')};
       $('.quiz').addClass('fadeOutLeft animatedFast');
       $('.choice').prop('disabled', true);
       setTimeout(function() {
+      k += 1;
       $('.quiz_text>p').html(q[k].describe).append(q[k].music);
       document.getElementById('song').oncanplaythrough = document.getElementById('song').play();
       listen(); 
@@ -68,11 +91,64 @@ $('.choice').click(function() {
       $('.play_btn>img').attr('src','./images/CD.png');
       }, 200);
       playN = 0;
+    }
       if (n > 14) {
       document.title = "我的音商高达XXX！我已经不屑和你们比智商情商了...";
       document.getElementById("song").pause();
       $('.quiz').remove();
-      $('.result').css('display', 'block').addClass('fadeInUp animatedSlow')
+      $('.result').css('display', 'block').addClass('fadeInUp animatedSlow');
+
+      if (s > 140) {
+        $('#final_perc').text('98%');
+        $('.final').text('天才');
+      } else if ( s > 120 && s < 150) { 
+        $('#final_perc').text('95%');
+        $('.final').text('牛逼');
+      } else if ( s > 90 && s < 120) { 
+        $('#final_perc').text('80%');
+        $('.final').text('高于平均');
+      } else if ( s > 60 && s < 90) { 
+        $('#final_perc').text('60%');
+        $('.final').text('一般嘛');
+      } else { 
+        $('#final_perc').text('30%');
+        $('.final').text('渣渣');
+      }
+      if (rhythm == 2) {
+        $('.a3').css('background-color', '#f5a623')
+      } else if (rhythm == 1) {
+        $('.a2').css('background-color', '#f5a623')  
+      } else {
+        $('.a1').css('background-color', '#f5a623')  
+      }
+      if (sense == 2) {
+        $('.b3').css('background-color', '#f5a623')
+      } else if (sense == 1) {
+        $('.b2').css('background-color', '#f5a623')  
+      } else {
+        $('.b1').css('background-color', '#f5a623')  
+      }
+      if (memo >= 3) {
+        $('.c3').css('background-color', '#f5a623')
+      } else if (memo > 1 && memo < 3) {
+        $('.c2').css('background-color', '#f5a623')  
+      } else {
+        $('.c1').css('background-color', '#f5a623')  
+      }
+      if (deci == 2) {
+        $('.d3').css('background-color', '#f5a623')
+      } else if (deci == 1) {
+        $('.d2').css('background-color', '#f5a623')  
+      } else {
+        $('.d1').css('background-color', '#f5a623')  
+      } 
+      if (know >= 3) {
+        $('.e3').css('background-color', '#f5a623')
+      } else if (know > 1) {
+        $('.e2').css('background-color', '#f5a623')  
+      } else {
+        $('.e1').css('background-color', '#f5a623')  
+      }
     }
 });
 

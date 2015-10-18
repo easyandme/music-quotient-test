@@ -14,7 +14,7 @@
 <body class="fadeIn animated noHover">
     <div style="margin:0 auto;display:none;">
     <img src="images/share_img.png"/></div>
-    <audio hidden preload id="start_audio" src="audios/4.mp3"></audio>
+    <audio hidden preload id="start_audio" src="./audios/t.mp3"></audio>
 	<div id="start">
 	    <div class="wrapper">  
 	        <div class="prelude">
@@ -49,33 +49,33 @@
 	        	<div class="tags">
 	        		<div class="tag1">
 	        			<p>节奏感</p>
-	        			<label>渣渣</label>
-	        			<label>不错</label>
-	        			<label>牛逼</label>
+	        			<label class="a1">渣渣</label>
+	        			<label class="a2">不错</label>
+	        			<label class="a3">牛逼</label>
 	        		</div>
 	        		<div class="tag2">
 	        			<p>感受力</p>
-	        			<label>渣渣</label>
-	        			<label>不错</label>
-	        			<label>牛逼</label>
+	        			<label class="b1">渣渣</label>
+	        			<label class="b2">不错</label>
+	        			<label class="b3">牛逼</label>
 	        		</div>
 	        		<div class="tag3">
 	        			<p>记忆力</p>
-	        			<label>渣渣</label>
-	        			<label>不错</label>
-	        			<label>牛逼</label>
+	        			<label class="c1">渣渣</label>
+	        			<label class="c2">不错</label>
+	        			<label class="c3">牛逼</label>
 	        		</div>
 	        		<div class="tag4">
 	        			<p>判断力</p>
-	        			<label>渣渣</label>
-	        			<label>不错</label>
-	        			<label>牛逼</label>
+	        			<label class="d1">渣渣</label>
+	        			<label class="d2">不错</label>
+	        			<label class="d3">牛逼</label>
 	        		</div>
 	        		<div class="tag5">
 	        			<p>姿势水平</p>
-	        			<label>渣渣</label>
-	        			<label>不错</label>
-	        			<label>牛逼</label>
+	        			<label class="e1">渣渣</label>
+	        			<label class="e2">不错</label>
+	        			<label class="e3">牛逼</label>
 	        		</div>
 	        	</div>
 	        	<button class="btn btn-md share">晒晒成绩</button>
@@ -115,13 +115,10 @@
 		$(window).resize(function() {
 			setHeight();
 		});
-		$("body").on("touchmove", false);
-		$('body').on('click', '#restart', function() {
-  ga('send', 'event', 'button', 'replay', 'replay_the_game');
-});
-		$('body').on('click', '#story', function() {
-  ga('send', 'event', 'button', 'lottery', 'lottery');
-});
+		$('body').on('touchmove', false); 
+		$('#test_btn').click(function() { 
+			document.getElementById('start_audio').play();  
+		}) 
 	});
 </script>
 </html>
