@@ -72,7 +72,7 @@ $('.choice').click(function() {
       document.title = "我的音商高达XXX！我已经不屑和你们比智商情商了...";
       document.getElementById("song").pause();
       $('.quiz').remove();
-      $('.result').addClass('fadeInUp animatedSlow')
+      $('.result').css('display', 'block').addClass('fadeInUp animatedSlow')
     }
 });
 
@@ -86,7 +86,7 @@ $('.play_btn>img').click(function() {
 
 
 /*All the appending stuff*/
-var p = "<div hidden id='progressbar'><div><span id='pg'></span></div></div></div>";
+var p = "<div hidden id='progressbar'><div><span id='pg'>1/14</span></div></div></div>";
  
 $.getJSON("data/data.json", function(e){
         $.extend(qar, e);
