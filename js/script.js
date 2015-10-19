@@ -23,6 +23,13 @@ function first() {
 }
 
 function listen() { 
+  if (n !== 6 && n !== 7 && n !== 8) {
+  document.getElementById('song').onplaying = function() {
+    setTimeout(function() {
+      $('.choice').prop('disabled', false);
+    }, 2500);
+  }
+}
   document.getElementById('song').addEventListener('ended', function(){
     $('.play_btn>img').removeClass('spin begin');
     playN += 1;
@@ -45,7 +52,7 @@ $('#start_btn').click(function() {
       $('.quiz').fadeIn(500);
       }, 1000)
       first();
-      $('#start_audio').remove();
+      $('#start_audio, .prelude').remove();
 })
 
 $('.choice').click(function() {
@@ -66,8 +73,7 @@ $('.choice').click(function() {
       y = o[u].decision_score || 0;
       deci += y;
       z = o[u].knowledge_score || 0;
-      know += z; 
-      console.log(s);
+      know += z;  
       $("#pg").text(k + 1 + "/14");
       if ($('.quiz').hasClass('fadeInRight animated')) {$('.quiz').removeClass('fadeInRight animated')};
       if ($('.play_btn>img').hasClass('spin begin')) {$('.play_btn>img').removeClass('spin begin')};
@@ -159,6 +165,12 @@ $('.play_btn>img').click(function() {
   listen();
 });
 
+setInterval(function(){
+  $("#start_btn").toggleClass("swing animatedDelayed3");
+  setInterval(function() {
+     $("#start_btn").toggleClass("shake animatedDelayed3");
+  }, 2500)
+}, 2500);
 
 /*All the appending stuff*/
 var p = "<div hidden id='progressbar'><div><span id='pg'>1/14</span></div></div></div>";

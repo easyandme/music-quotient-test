@@ -1,5 +1,6 @@
-/* copyright 2015 */
-/* authored by Maxim Xu with the help of Animated.css  */
+/* copyright 2015  
+ * authored by Maxim Xu with the help of Animated.css  
+ */
 html {
   overflow: hidden;
 }
@@ -19,7 +20,7 @@ p {
 body div#start {
   margin:0 auto; 
   background-color: #f0f0f0;
-  max-width: 50em;
+  max-width: 80em;
   min-width: 320px;
   max-height: 1440px;
   padding: 1em 2em 3em 2em;
@@ -31,7 +32,7 @@ body div#start {
   background-color: #fff;
   height: 88%;
   top: 10%;
-  max-width: 52em;
+  max-width: 80em;
   border-left: 2px solid #CAC5C5;
   border-right: 2px solid #CAC5C5;
   border-bottom: 2px solid #CACACA;
@@ -555,4 +556,64 @@ body div#start {
   -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
     animation:spin 4s linear infinite;
+}
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
 }
