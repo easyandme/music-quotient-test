@@ -43,19 +43,29 @@ body div#start {
     font-weight: bold;
     margin: 165px auto auto;
     border-color: #fff;
-    background-color: #5DD4CA;
     cursor: pointer;
     opacity: .75;
     position: relative;
     display: table;
+    padding-left: 40px;
+    background:transparent url(./images/Headphones.png) no-repeat left;
+        border: 0;
+    background-size: 28px;
+    background-position: 6px;
+    background-color: #5DD4CA;
 }
 #start_btn {
     position: relative;
     display: table;
-    margin: 90px auto auto;
-    background-color: #7ed321;
+    margin: 90px auto auto; 
     border: none;
-}
+    padding-left: 40px;
+    background:transparent url(./images/start.png) no-repeat left;
+        border: 0;
+    background-size: 32px;
+    background-position: 6px;
+    background-color: #7ed321;
+} 
 #progressbar {
       background-color: #fff;
       border-radius: 13px; 

@@ -53,8 +53,7 @@ $('.choice').click(function() {
       l += 50/7; 
       $("#progressbar>div").css("width", l + "%");
       var u = $(this).attr("data-choice");
-      o = q[k];
-      console.log(o[u]);
+      o = q[k]; 
       if (k < 14) {
       m = o[u].bonus || 0;
       s += m; 
@@ -68,7 +67,7 @@ $('.choice').click(function() {
       deci += y;
       z = o[u].knowledge_score || 0;
       know += z; 
-      console.log(deci);
+      console.log(s);
       $("#pg").text(k + 1 + "/14");
       if ($('.quiz').hasClass('fadeInRight animated')) {$('.quiz').removeClass('fadeInRight animated')};
       if ($('.play_btn>img').hasClass('spin begin')) {$('.play_btn>img').removeClass('spin begin')};
@@ -98,16 +97,16 @@ $('.choice').click(function() {
       $('.quiz').remove();
       $('.result').css('display', 'block').addClass('fadeInUp animatedSlow');
 
-      if (s > 140) {
-        $('#final_perc').text('98%');
+      if (s >= 140) {
+        $('#final_perc').text('99%');
         $('.final').text('天才');
-      } else if ( s > 120 && s < 150) { 
+      } else if ( s > 110 && s < 140) { 
         $('#final_perc').text('95%');
         $('.final').text('牛逼');
-      } else if ( s > 90 && s < 120) { 
+      } else if ( s > 90 && s <= 110) { 
         $('#final_perc').text('80%');
         $('.final').text('高于平均');
-      } else if ( s > 60 && s < 90) { 
+      } else if ( s > 60 && s <= 90) { 
         $('#final_perc').text('60%');
         $('.final').text('一般嘛');
       } else { 
