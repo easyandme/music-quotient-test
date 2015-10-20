@@ -105,10 +105,10 @@ $('.choice').click(function() {
 
       if (s >= 140) {
         $('#final_perc').text('99%');
-        $('.final').text('天才');
+        $('.final').text('莫扎特转世');
       } else if ( s > 110 && s < 140) { 
         $('#final_perc').text('95%');
-        $('.final').text('牛逼');
+        $('.final').text('音乐天赋爆表');
       } else if ( s > 90 && s <= 110) { 
         $('#final_perc').text('80%');
         $('.final').text('高于平均');
@@ -120,39 +120,39 @@ $('.choice').click(function() {
         $('.final').text('渣渣');
       }
       if (rhythm == 2) {
-        $('.a3').css('background-color', '#f5a623')
+        $('.a3').addClass('highlighted');
       } else if (rhythm == 1) {
-        $('.a2').css('background-color', '#f5a623')  
+        $('.a2').addClass('highlighted');  
       } else {
-        $('.a1').css('background-color', '#f5a623')  
+        $('.a1').addClass('highlighted');  
       }
       if (sense == 2) {
-        $('.b3').css('background-color', '#f5a623')
+        $('.b3').addClass('highlighted');
       } else if (sense == 1) {
-        $('.b2').css('background-color', '#f5a623')  
+        $('.b2').addClass('highlighted');  
       } else {
-        $('.b1').css('background-color', '#f5a623')  
+        $('.b1').addClass('highlighted');  
       }
       if (memo >= 3) {
-        $('.c3').css('background-color', '#f5a623')
+        $('.c3').addClass('highlighted');
       } else if (memo > 1 && memo < 3) {
-        $('.c2').css('background-color', '#f5a623')  
+        $('.c2').addClass('highlighted');  
       } else {
-        $('.c1').css('background-color', '#f5a623')  
+        $('.c1').addClass('highlighted');  
       }
       if (deci == 2) {
-        $('.d3').css('background-color', '#f5a623')
+        $('.d3').addClass('highlighted');
       } else if (deci == 1) {
-        $('.d2').css('background-color', '#f5a623')  
+        $('.d2').addClass('highlighted');  
       } else {
-        $('.d1').css('background-color', '#f5a623')  
+        $('.d1').addClass('highlighted');  
       } 
       if (know >= 3) {
-        $('.e3').css('background-color', '#f5a623')
+        $('.e3').addClass('highlighted');
       } else if (know > 1) {
-        $('.e2').css('background-color', '#f5a623')  
+        $('.e2').addClass('highlighted');  
       } else {
-        $('.e1').css('background-color', '#f5a623')  
+        $('.e1').addClass('highlighted');  
       }
     }
 });
@@ -167,6 +167,7 @@ $('.play_btn>img').click(function() {
 
 setInterval(function(){
   $("#start_btn").toggleClass("swing animatedDelayed3");
+  $(".pointer").toggleClass("bounce animated");
   setInterval(function() {
      $("#start_btn").toggleClass("shake animatedDelayed3");
   }, 2500)
