@@ -13,12 +13,18 @@
 	</head>
 <body class="fadeIn animated noHover">
     <div style="margin:0 auto;display:none;">
-    <img alt="share" src="images/share_img.png"/></div>
+    <img alt="share" src="./images/CD.png"/></div>
     <audio hidden preload id="start_audio" src="./audios/t.mp3"></audio>
+    <p class='slogan'>世界电声乐器领导品牌<img alt='logo' src='./images/logo.png' />友情赞助</p>
 	<div id="start">
 	    <div class="wrapper">  
 	        <div class="prelude">
+	           <div class="intro_text">
+	           <p>本测试由知名音乐人和音乐工作者参与出题，题目包含各个难度，无需任何音乐知识和背景即可参与。</p> <br>
+	           <p>建议戴耳机进行，如果点击播放后没有声音可能是由于开启了静音或网速不佳，建议在Wi-Fi环境下测试。</p>
+	           </div>
 		       <button class="btn btn-lg btn-success" id="test_btn">测试音量</button> 
+	           <p class="text_2">测试中每道题最多可播放两遍，中途不可暂停。</p>
 		       <button class="btn btn-lg btn-success" id="start_btn">开始测试</button>
 	        </div>
 	        <div hidden class="quiz">
@@ -41,48 +47,52 @@
 	        		<p>测试结果</p>
 	        	</div>
 	        	<div class="result_yours">
+	        	    <p>你的音乐商数是:</p>
 	        		<p class="final">牛逼</p>
 	        	</div>
 	        	<div class="percent">
-	        		<p class="what">击败全球<span id="final_perc">95%</span>的测试者</p>
+	        		<p class="what">击败全球 <span id="final_perc">95%</span> 的测试者</p>
 	        	</div>
 	        	<div class="tags">
-	        		<div class="tag1">
+	        		<div class="tag1 tag">
 	        			<p>节奏感</p>
 	        			<label class="a1">渣渣</label>
 	        			<label class="a2">不错</label>
 	        			<label class="a3">牛逼</label>
 	        		</div>
-	        		<div class="tag2">
+	        		<div class="tag2 tag">
 	        			<p>感受力</p>
 	        			<label class="b1">渣渣</label>
 	        			<label class="b2">不错</label>
 	        			<label class="b3">牛逼</label>
 	        		</div>
-	        		<div class="tag3">
+	        		<div class="tag3 tag">
 	        			<p>记忆力</p>
 	        			<label class="c1">渣渣</label>
 	        			<label class="c2">不错</label>
 	        			<label class="c3">牛逼</label>
 	        		</div>
-	        		<div class="tag4">
+	        		<div class="tag4 tag">
 	        			<p>判断力</p>
 	        			<label class="d1">渣渣</label>
 	        			<label class="d2">不错</label>
 	        			<label class="d3">牛逼</label>
 	        		</div>
-	        		<div class="tag5">
+	        		<div class="tag5 tag">
 	        			<p>音乐知识</p>
 	        			<label class="e1">渣渣</label>
 	        			<label class="e2">不错</label>
 	        			<label class="e3">牛逼</label>
 	        		</div>
 	        	</div>
-	        	<button class="btn btn-md share">晒晒成绩</button>
-	        	<button class="btn btn-md follow">关注罗兰</button>
+	        	<button class="btn btn-lg share">晒晒成绩</button>
+	        	<button class="btn btn-lg follow">关注罗兰</button>
 	        </div>
 	    </div>
 	</div>
+	<img hidden alt="guitar" width="80" src="./images/guitar.png" />
+	<p hidden class="share_txt">戳右上角<br>炫耀成绩</p>
+	<img hidden alt="QR" width="80" src="./images/QR.jpg" />
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="js/fastclick.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>

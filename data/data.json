@@ -13,7 +13,7 @@
     } 
   },
   {
-    "describe": "<b>这段音乐的节奏变化是？</b>",
+    "describe": "<b>这段音乐的速度是否有变化？</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/b.mp3'></audio>",
     "genre": "rhythm",
     "A": {
@@ -26,7 +26,7 @@
     } 
   },
   {
-    "describe": "<b>选出下面最能达标这个音乐片段的图形</b>",
+    "describe": "<b>选出下面最能表达这个音乐片段的图形</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/c.mp3'></audio>",
     "genre": "sense",
     "A": {
@@ -42,7 +42,7 @@
     }
   },
   {
-    "describe": "<b>选出下面最能达标这个音乐片段的图形</b>",
+    "describe": "<b>选出下面最能表达这个音乐片段的图形</b>",
     "music": "<audio hidden preload class='songs' id='song' src='audios/d.mp3'></audio>",
     "genre": "sense",
     "A": {
@@ -56,6 +56,32 @@
     "C": {
       "describe": "<span style='font-size:3em;line-height:20px;'>&#9632;&#9632;&#9632;&#9632;<span style='position:absolute;top:20px'>&#8211;</span><span style='position:absolute;left:160px'>&#9632;</span></span>"
     }
+  },
+  {
+    "describe": "<b>这段音乐表达的情绪是？</b>",
+    "music": "<audio hidden preload class='songs' id='song' src='audios/i.mp3'></audio>",
+    "genre": "decision",
+    "A": {
+      "describe": "紧张的",
+      "bonus": 10,
+      "decision_score": 1
+    },
+    "B": {
+      "describe": "忧伤的"
+    } 
+  },
+  {
+    "describe": "<b>这段音乐的感觉更偏向于？</b>",
+    "music": "<audio hidden preload class='songs' id='song' src='audios/j.mp3'></audio>",
+    "genre": "decision",
+    "A": {
+      "describe": "阳光沙滩",
+      "bonus": 10,
+      "decision_score": 1
+    },
+    "B": {
+      "describe": "浩瀚星空"
+    } 
   },
   {
     "describe": "<b>这个用军鼓演奏的片段中，军鼓总共敲击了几下？</b>",
@@ -123,32 +149,6 @@
     "D": {
       "describe": "节奏和音高都不同"
     }
-  },
-  {
-    "describe": "<b>这段音乐表达的情绪是？</b>",
-    "music": "<audio hidden preload class='songs' id='song' src='audios/i.mp3'></audio>",
-    "genre": "decision",
-    "A": {
-      "describe": "紧张的",
-      "bonus": 10,
-      "decision_score": 1
-    },
-    "B": {
-      "describe": "忧伤的"
-    } 
-  },
-  {
-    "describe": "<b>这段音乐的感觉更偏向于？</b>",
-    "music": "<audio hidden preload class='songs' id='song' src='audios/j.mp3'></audio>",
-    "genre": "decision",
-    "A": {
-      "describe": "阳光沙滩",
-      "bonus": 10,
-      "decision_score": 1
-    },
-    "B": {
-      "describe": "浩瀚星空"
-    } 
   },
   {
     "describe": "<b>这段乐曲是由吉他、架子鼓和什么乐器共同完成的？</b>",
