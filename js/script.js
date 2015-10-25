@@ -108,7 +108,7 @@ $('.choice').click(function() {
       var perc, quotient, final_txt;
       if (s >= 140) {
         perc = 99;
-        pretext = "莫扎特转世！"
+        pretext = "莫扎特转世！！！"
         final_txt = "！万中无一..."
       } else if ( s > 110 && s < 140) { 
         perc = Math.floor(Math.random()*10) + 89;
