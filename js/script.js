@@ -105,23 +105,28 @@ $('.choice').click(function() {
         $('.quiz, #progressbar').remove();
         $('.result, .slogan').css('display', 'block').addClass('fadeInUp animatedSlow');
       var pretext = ''; 
-      var perc, quotient, final_txt;
-      if (s >= 140) {
+      var perc, quotient, final_txt, middle;
+      if (s >= 130) {
         perc = 99;
-        pretext = "莫扎特转世！！！"
-        final_txt = "！万中无一..."
-      } else if ( s > 110 && s < 140) { 
+        middle = '竟有';
+        pretext = "莫扎特转世！！！";
+        final_txt = "！惊呆了天王老子...";
+      } else if ( s > 110 && s < 130) { 
         perc = Math.floor(Math.random()*10) + 89;
-        final_txt = "！我已经不屑和你们比智商情商了..."
-      } else if ( s > 90 && s <= 110) { 
+        middle = '高达';
+        final_txt = "，已经不屑和你们比智商情商了...你也来测测吧"
+      } else if ( s > 80 && s <= 110) { 
         perc = Math.floor(Math.random()*10) + 69;
-        final_txt = "！也就是普通路人水平..."
-      } else if ( s > 60 && s <= 90) { 
+        middle = '是';
+        final_txt = "，也许拍片神马的更符合我的气质...你也来测测吧"
+      } else if ( s > 60 && s <= 80) { 
         perc = Math.floor(Math.random()*30) + 49;
-        final_txt = "！不能怪我我有一只耳朵聋了..."
+        middle = '只有';
+        final_txt = "？抱歉多年来折磨你们耳朵了...你也来测测吧"
       } else { 
         perc = Math.floor(Math.random()*30) + 9;
-        final_txt = "！纯属音乐中的智障..."
+        middle = '尼玛才';
+        final_txt = "？纯属音乐中的智障..."
       }
         quotient = s + t;
         $('.percent').fadeIn(500);
@@ -135,7 +140,7 @@ $('.choice').click(function() {
             $(this).text(Math.ceil(now));
           }
       }); 
-      document.title = pretext + '我的音商高达' + quotient + final_txt;
+      document.title = pretext + '我的音商' + middle + quotient + final_txt;
       if (rhythm == 2) {
         $('.a3').addClass('highlighted');
       } else if (rhythm == 1) {
@@ -224,10 +229,10 @@ $('.share').click(function() {
 
 $('.follow').click(function() { 
         addOverlay(); 
-        $('img[alt="QR"]').show();
+        $('img[alt="QR"], img[alt="des"]').show();
         $('#overlay').click(function() {
             $(this).remove(); 
-            $('img[alt="QR"], .share_txt').hide();
+            $('img[alt="QR"], img[alt="des"], .share_txt').hide();
         });
 });
 });

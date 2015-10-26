@@ -9,18 +9,18 @@
 	<link rel="shortcut icon" type="image/png" href="./images/fav.png"/>
 	<title>罗兰音乐商数测试</title>
 	<link rel="stylesheet" href="./bootstrap.min.css">
-	<link rel="stylesheet" href="./main.css">
+	<link rel="stylesheet" href="./main.min.css">
 	</head>
 <body class="fadeIn animated noHover">
     <div style="margin:0 auto;display:none;">
-    <img alt="share" src="./images/CD.png"/></div>
+    <img alt="share" src="./images/CD2.png"/></div>
     <audio hidden preload id="start_audio" src="./audios/t.mp3"></audio>
     <p class='slogan'>世界电声乐器领导品牌<img alt='logo' src='./images/logo.png' />友情赞助</p>
 	<div id="start">
 	    <div class="wrapper">  
 	        <div class="prelude">
 	           <div class="intro_text">
-	           <p>本测试由知名音乐人和音乐工作者参与出题，题目包含各个难度，无需任何音乐知识和背景即可参与。</p> <br>
+	           <p>还在扯智商情商？测测你音商多少！本测试由Roland冠名赞助，lovequiz工作室制作。</p> <br>
 	           <p>建议戴耳机进行，如果点击播放后没有声音可能是由于开启了静音或网速不佳，建议在Wi-Fi环境下测试。</p>
 	           </div>
 		       <button class="btn btn-lg btn-success" id="test_btn">测试音量</button> 
@@ -85,24 +85,25 @@
 	        			<label class="e3">牛逼</label>
 	        		</div>
 	        	</div>
-	        	<button class="btn btn-lg share">晒晒成绩</button>
-	        	<button class="btn btn-lg follow">关注罗兰</button>
+	        	<button id="share" class="btn btn-lg share">晒晒成绩</button>
+	        	<button id="follow" class="btn btn-lg follow">关注罗兰</button>
 	        </div>
 	    </div>
 	</div>
 	<img hidden alt="guitar" width="80" src="./images/guitar.png" />
 	<p hidden class="share_txt">戳右上角<br>炫耀成绩</p>
 	<img hidden alt="QR" width="80" src="./images/QR.jpg" />
+	<img hidden alt="des" width="250" src="./images/des.jpg" />
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="js/fastclick.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
-<script async>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-68397460-1', 'auto');
+  ga('create', 'UA-68397460-2', 'auto');
   ga('send', 'pageview');
 </script>
 <script type='text/javascript'>
@@ -129,6 +130,16 @@
 		$('#test_btn').click(function() { 
 			document.getElementById('start_audio').play();  
 		}) 
+	});
+</script>
+<script type="text/javascript">
+	$(function() {  
+			$('body').on('click', '#share', function() {
+			  ga('send', 'event', 'share', 'share', 'share');
+			});
+			$('body').on('click', '#follow', function() {
+			  ga('send', 'event', 'follow', 'follow', 'click_for_QR');
+			});
 	});
 </script>
 </html>
