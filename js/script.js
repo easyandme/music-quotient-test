@@ -115,7 +115,11 @@ $('.choice').click(function() {
         perc = Math.floor(Math.random()*10) + 89;
         middle = '高达';
         final_txt = "，已经不屑和你们比智商情商了...你也来测测吧"
-      } else if ( s > 80 && s <= 110) { 
+      } else if ( s > 90 && s <= 110) { 
+        perc = Math.floor(Math.random()*10) + 89;
+        middle = '高达';
+        final_txt = "，只是没时间去参加我是歌手而已！...你也来测测吧"
+      } else if ( s > 70 && s <= 90) { 
         perc = Math.floor(Math.random()*10) + 69;
         middle = '是';
         final_txt = "，也许拍片神马的更符合我的气质...你也来测测吧"
@@ -126,7 +130,7 @@ $('.choice').click(function() {
       } else { 
         perc = Math.floor(Math.random()*30) + 9;
         middle = '尼玛才';
-        final_txt = "？纯属音乐中的智障..."
+        final_txt = "？谁再让我学乐器我跟谁急..."
       }
         quotient = s + t;
         $('.percent').fadeIn(500);
