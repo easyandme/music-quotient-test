@@ -23,6 +23,22 @@ function first() {
     $('.quiz_text>p').html(q[k].describe).append(q[k].music);
 }
 
+/* add overlay mask using pure js */
+function addOverlay() { 
+        var myOverlay = document.createElement('div');
+        myOverlay.id = 'overlay';
+        document.body.appendChild(myOverlay); 
+        myOverlay.style.position = 'absolute';
+        myOverlay.style.top = 0;  
+        myOverlay.style.opacity = 0.8;  
+        myOverlay.style.width = window.innerWidth + 'px';
+        myOverlay.style.height = window.innerHeight + 'px';
+        myOverlay.style.top = window.pageYOffset + 'px';
+        myOverlay.style.left = window.pageXOffset + 'px';
+        myOverlay.style.zIndex = 999;
+        myOverlay.style.backgroundColor = '#000'; 
+}
+
 function listen() { 
   if (n !== 8 && n !== 9 && n !== 10) {
   document.getElementById('song').onplaying = function() {
@@ -205,22 +221,6 @@ var p = "<div hidden id='progressbar'><div><span id='pg'>1/14</span></div></div>
 $.getJSON("data/data.json", function(e){
         $.extend(qar, e);
 });
-
-/* add overlay mask using pure js */
-function addOverlay() { 
-        var myOverlay = document.createElement('div');
-        myOverlay.id = 'overlay';
-        document.body.appendChild(myOverlay); 
-        myOverlay.style.position = 'absolute';
-        myOverlay.style.top = 0;  
-        myOverlay.style.opacity = 0.8;  
-        myOverlay.style.width = window.innerWidth + 'px';
-        myOverlay.style.height = window.innerHeight + 'px';
-        myOverlay.style.top = window.pageYOffset + 'px';
-        myOverlay.style.left = window.pageXOffset + 'px';
-        myOverlay.style.zIndex = 999;
-        myOverlay.style.backgroundColor = '#000'; 
-}
 
 $('.share').click(function() {
         addOverlay(); 
