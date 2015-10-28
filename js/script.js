@@ -127,8 +127,12 @@ $('.choice').click(function() {
         middle = '竟有';
         pretext = "莫扎特转世！！！";
         final_txt = "！惊呆了天王老子...";
-      } else if ( s > 110 && s < 130) { 
-        perc = Math.floor(Math.random()*10) + 89;
+      } else if ( s > 120 && s < 130) { 
+        perc = Math.floor(Math.random()*5) + 94;
+        middle = '高达';
+        final_txt = "，已经不屑和你们比智商情商了...你也来测测吧"
+      } else if ( s > 110 && s <= 120) { 
+        perc = Math.floor(Math.random()*5) + 89;
         middle = '高达';
         final_txt = "，已经不屑和你们比智商情商了...你也来测测吧"
       } else if ( s > 90 && s <= 110) { 
