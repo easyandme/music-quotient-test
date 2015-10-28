@@ -227,13 +227,12 @@ $.getJSON("data/data.json", function(e){
 });
 
 $('.share').click(function() {
-       /* addOverlay(); 
+        addOverlay(); 
         $('img[alt="guitar"], .share_txt').show();
         $('#overlay').click(function() {
             $(this).remove(); 
             $('img[alt="guitar"], .share_txt').hide();
-        }); */
-       window.location.reload();
+        });
 });
 
 $('.follow').click(function() { 
