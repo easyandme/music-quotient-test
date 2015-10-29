@@ -228,7 +228,7 @@ $.getJSON("data/data.json", function(e){
 
 $('.share').click(function() {
         addOverlay(); 
-        $('body').css('-webkit-user-select', 'text');
+        $('body').css('-webkit-user-select', 'all');
         $('img[alt="guitar"], .share_txt, #copy').show();
         $('#overlay').click(function() {
             $(this).remove(); 
