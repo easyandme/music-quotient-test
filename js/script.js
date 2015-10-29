@@ -228,11 +228,14 @@ $.getJSON("data/data.json", function(e){
 
 $('.share').click(function() {
         addOverlay(); 
-        $('img[alt="guitar"], .share_txt').show();
+        $('body').css('-webkit-user-select', 'text');
+        $('img[alt="guitar"], .share_txt, #copy').show();
         $('#overlay').click(function() {
             $(this).remove(); 
-            $('img[alt="guitar"], .share_txt').hide();
+            $('img[alt="guitar"], .share_txt, #copy').hide();
+            $('body').css('-webkit-user-select', 'none');
         });
+
 });
 
 $('.follow').click(function() { 
