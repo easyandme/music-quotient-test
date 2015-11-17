@@ -136,7 +136,7 @@ $('.choice').click(function() {
         middle = '高达';
         final_txt = "，已经不屑和你们比智商情商了...你也来测测吧"
       } else if ( s > 90 && s <= 110) { 
-        perc = Math.floor(Math.random()*10) + 89;
+        perc = Math.floor(Math.random()*10) + 79;
         middle = '高达';
         final_txt = "，只是没时间去参加我是歌手而已！...你也来测测吧"
       } else if ( s > 70 && s <= 90) { 
