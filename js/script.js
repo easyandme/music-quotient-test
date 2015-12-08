@@ -227,13 +227,11 @@ $.getJSON("data/data.json", function(e){
 });
 
 $('.share').click(function() {
-        addOverlay(); 
-        $('body').css('-webkit-user-select', 'all');
-        $('img[alt="guitar"], .share_txt, #copy').show();
+        addOverlay();   
+        $('img[alt="developer"],.share_txt').show();
         $('#overlay').click(function() {
             $(this).remove(); 
-            $('img[alt="guitar"], .share_txt, #copy').hide();
-            $('body').css('-webkit-user-select', 'none');
+            $('img[alt="developer"],.share_txt').hide();
         });
 
 });

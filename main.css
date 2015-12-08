@@ -305,7 +305,7 @@ img[alt="des"] {
 }
 .follow {
   position: absolute;
-  top: 350px;
+  top: 380px;
   display: table;
   left: 50%;
   background-color: #7ed321;
@@ -315,11 +315,14 @@ img[alt="des"] {
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
-img[alt="guitar"] {
-  z-index: 1000;
+img[alt="developer"] {
   position: absolute;
-  top: 0;
-  right: 30px;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  margin-top: -160px;
 }
 img[alt="QR"] {
   z-index: 1000;
