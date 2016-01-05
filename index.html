@@ -87,6 +87,9 @@
 	        	</div>
 	        	<button id="share" class="btn btn-lg share">开发者</button>
 	        	<button id="follow" class="btn btn-lg follow">关注罗兰</button>
+	        	<span id="busuanzi_container_site_uv">
+  已有<span hidden id="busuanzi_value_site_uv"></span><span id="busuanzi_value_site_uv_2"></span>人参与测试
+</span>
 	        </div>
 	    </div>
 	</div>
@@ -97,6 +100,7 @@
 	<script type="text/javascript" src="js/fastclick.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <script async>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -128,7 +132,7 @@
 		$('body').on('touchmove', false); 
 		$('#test_btn').click(function() { 
 			document.getElementById('start_audio').play();  
-		}) 
+		});
 	});
 </script>
 <script type="text/javascript">
@@ -139,6 +143,14 @@
 			$('body').on('click', '#follow', function() {
 			  ga('send', 'event', 'follow', 'follow', 'click_for_QR');
 			});
+		//calculate the pageviews
+		$.getScript("//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js", function() {
+			setTimeout(function(){
+			$('#busuanzi_container_site_uv').css('display','inline');
+			console.log($('#busuanzi_value_site_uv').text());
+		$('#busuanzi_value_site_uv_2').text(parseInt($('#busuanzi_value_site_uv').text()) + 1241887);//hardcode the initial pageviews that were not included in busuanzi.js
+		},3000)
+          }); 
 	});
 </script>
 </html>

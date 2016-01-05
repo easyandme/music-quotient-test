@@ -306,7 +306,7 @@ img[alt="des"] {
 }
 .follow {
   position: absolute;
-  top: 380px;
+  top: 370px;
   display: table;
   left: 50%;
   background-color: #7ed321;
@@ -315,6 +315,13 @@ img[alt="des"] {
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+}
+span#busuanzi_container_site_uv {
+    display: inline;
+    position: absolute;
+    top: 432px; 
+    width: 100%;
+    text-align: center;
 }
 img[alt="developer"] {
   position: absolute;
