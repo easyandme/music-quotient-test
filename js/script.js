@@ -11,8 +11,7 @@ var s = 0;
 var n = 1;
 var t = 15;
 var qar = [];
-var playN = 0;
-var rhythm = 0, sense = 0, memo = 0, deci = 0, know = 0;
+var playN = 0, rhythm = 0, sense = 0, memo = 0, deci = 0, know = 0;
 var r, w, x, y, z, o; 
 var isPlaying = false;
 
@@ -122,6 +121,7 @@ $('.choice').click(function() {
         $('.result, .slogan').css('display', 'block').addClass('fadeInUp animatedSlow');
       var pretext = ''; 
       var perc, quotient, final_txt, middle;
+      //"if" statements look stupid? fastest though
       if (s >= 130) {
         perc = 99;
         middle = '竟有';
