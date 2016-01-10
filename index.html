@@ -87,7 +87,7 @@
 	        	<button id="share" class="btn btn-lg share">开发者</button>
 	        	<button id="follow" class="btn btn-lg follow">关注罗兰</button>
 	        	<span id="busuanzi_container_site_uv">
-  已有<span hidden id="busuanzi_value_site_uv"></span><span id="busuanzi_value_site_uv_2"></span>人参与测试
+  已有<span hidden id="busuanzi_value_site_uv"></span><span id="busuanzi_value_site_uv_plus_initial"></span>人参与测试
 </span>
 	        </div>
 	    </div>
@@ -147,7 +147,7 @@
 			setTimeout(function(){
 			$('#busuanzi_container_site_uv').css('display','inline');
 			console.log($('#busuanzi_value_site_uv').text());
-		$('#busuanzi_value_site_uv_2').text(parseInt($('#busuanzi_value_site_uv').text()) + 1241887);//hardcode the initial pageviews that were not included in busuanzi.js
+		$('#busuanzi_value_site_uv_plus_initial').text(parseInt($('#busuanzi_value_site_uv').text()) + 1241887);//hardcode the initial pageviews that were not included in busuanzi.js
 		},3000)
           }); 
 	});
