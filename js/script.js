@@ -5,14 +5,14 @@ $(function() {
 $('body').bind('touchstart', function() {});
   FastClick.attach(document.body);
 
-var q, k, m;
-var l = 0;
-var s = 0;
-var n = 1;
-var t = 15;
-var qar = [];
+var q, k, m; //q for questions; k for question number in JSON; m for answer scores
+var l = 0; //l for progress
+var s = 0; //s for total scores
+var n = 1; //n for question number in test
+var t = 15; //t for repeating music bonus
+var qar = []; //qar for questions array
 var playN = 0, rhythm = 0, sense = 0, memo = 0, deci = 0, know = 0;
-var r, w, x, y, z, o; 
+var r, w, x, y, z, o; // genre stars
 var isPlaying = false;
 
 
