@@ -15,7 +15,7 @@ var playN = 0, rhythm = 0, sense = 0, memo = 0, deci = 0, know = 0;
 var r, w, x, y, z, o; // genre stars
 var isPlaying = false;
 
-
+/* append first song onto the board */
 function first() {
     q = qar; 
     k = 0;
@@ -37,7 +37,7 @@ function addOverlay() {
         myOverlay.style.zIndex = 999;
         myOverlay.style.backgroundColor = '#000'; 
 }
-
+/* play music */
 function listen() { 
   if (n !== 8 && n !== 9 && n !== 10) {
   document.getElementById('song').onplaying = function() {
