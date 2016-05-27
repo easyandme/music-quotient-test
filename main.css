@@ -368,6 +368,13 @@ img[alt="QR"] {
   left: 50%;
   margin-left: -45px;
 }
+iframe#github { 
+    display: block;
+    position: absolute;
+    top: 430px;
+    left: 50%;
+    margin-left: -35px;
+}
 /* Animations with modified Animate.css*/
 .animatedSlow{-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
 .animatedFast{-webkit-animation-duration:.35s;animation-duration:.35s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
